@@ -11,7 +11,7 @@ public record CriarProdutoRequest(
 
         @NotNull(message = "O preço é obrigatório")
         @Digits(integer = 13, fraction = 2, message = "O preço deve ter no máximo 13 dígitos inteiros e 2 decimais")
-        @DecimalMin(value = "0,0", inclusive = false, message = "O preço deve ser maior do que zero")
+        @DecimalMin(value = "0.0", inclusive = false, message = "O preço deve ser maior do que zero")
         BigDecimal preco,
 
         @Size(max = 255, message = "A descrição não pode ter mais que 255 caracteres")
